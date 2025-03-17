@@ -17,6 +17,7 @@
     display: contents;
     font: bold 30px "Helvetica Neue";
     color: #3c8ee0;
+    
   }
   .nav-search{
     position: center;
@@ -45,7 +46,6 @@
     cursor: pointer; /* Changes cursor to indicate it's clickable */
     transition: transform 0.3s ease;
   }
-<<<<<<< HEAD
   .nav-profile{
   position: right;
   margin-left: 5rem;
@@ -53,29 +53,16 @@
   padding: 10px;
   font-size: 15px;
   margin-top: 20px;
-=======
-  
-  .nav-profile img:hover {
-    transform: scale(1.1); /* Slight zoom effect on hover */
->>>>>>> 2e598a3c50eae530fab424248e9de4e09fb1a791
   }
   
   
   .nav-button:hover {
     background-color: rgba(243, 53, 53, 0.2);
     transform: scale(1.05);
-<<<<<<< HEAD
   }/* Container for login & sign-in buttons */
 .nav-auth {
   display: flex;
   gap: 1px; /* Space between buttons */
-=======
-  }
-  /* Container for login & sign-in buttons */
-.nav-auth {
-  display: flex;
-  gap: 10px; /* Space between buttons */
->>>>>>> 2e598a3c50eae530fab424248e9de4e09fb1a791
 }
 
 /* Login Button - Transparent with Blue Border */
