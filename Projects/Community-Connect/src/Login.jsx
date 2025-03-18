@@ -1,5 +1,6 @@
 import './login.css';
 import { Link } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 const Login = () => {
   return (
     <div className="gradient-background">
@@ -37,7 +38,9 @@ const Login = () => {
                               <Link to="/Reset" >Forgot password?</Link>
                             </p>
                           </div>
-            <button type="submit" className="sign-in-button">Sign In</button>
+            <button type="submit"
+            onClick={() => Navigate('/SignUp')}
+                       className="sign-in-button">Sign In</button>
           </form>
           
           <div className="social-login">
@@ -47,7 +50,7 @@ const Login = () => {
           </div>
           
           <p className="sign-up-text">
-            Don't have an account? <Link to ="/SignUp">Sign up</Link>
+            Don't have an account? <Link to ="./Signup">Sign up</Link>
           </p>
         </div>
       </div>

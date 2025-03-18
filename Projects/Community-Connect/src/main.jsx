@@ -8,7 +8,7 @@ import Create from './Create';
 import Threads from './Profiledetails/Threads';
 import Replies from './Profiledetails/Replies';
 import Login from './Login';
-import Signup from './Signup';
+import Signup from './SignUp';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
