@@ -1,7 +1,28 @@
 import './login.css';
-import { Link } from 'react-router-dom';
-import { Navigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+
 const Login = () => {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevents page refresh
+
+    if (!email || !password) {
+      alert("Please enter both email and password.");
+      return;
+    }
+
+    console.log("Email:", email);
+    console.log("Password:", password);
+    
+    // TODO: Add authentication logic here (API call)
+    
+    navigate('/dashboard'); // Redirect after login
+  };
+
   return (
     <div className="gradient-background">
       <div className="container">
@@ -10,7 +31,7 @@ const Login = () => {
           <h2 className="title">Welcome back</h2>
           <p className="subtitle">Sign in to continue Community Connect</p>
           
-          <form className="form">
+          <form className="form" onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="email" className="label">Email</label>
               <input
@@ -18,6 +39,9 @@ const Login = () => {
                 id="email"
                 placeholder="Enter your email"
                 className="input"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)} // ✅ Input now updates state
+                required
               />
             </div>
             
@@ -28,19 +52,22 @@ const Login = () => {
                 id="password"
                 placeholder="Enter your password"
                 className="input"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)} // ✅ Input now updates state
+                required
               />
             </div>
-                          <div className="options">
-                            <label className="remember-me">
-                              <input type="checkbox" /> Remember me
-                            </label>
-                            <p className="forgot-password">
-                              <Link to="/Reset" >Forgot password?</Link>
-                            </p>
-                          </div>
-            <button type="submit"
-            onClick={() => Navigate('/SignUp')}
-                       className="sign-in-button">Sign In</button>
+
+            <div className="options">
+              <label className="remember-me">
+                <input type="checkbox" /> Remember me
+              </label>
+              <p className="forgot-password">
+                <Link to="/Reset">Forgot password?</Link>
+              </p>
+            </div>
+
+            <button type="submit" className="sign-in-button">Sign In</button>
           </form>
           
           <div className="social-login">
@@ -49,8 +76,8 @@ const Login = () => {
             <button className="social-button">Facebook</button>
           </div>
           
-          <p className="sign-up-text">
-            Don't have an account? <Link to ="./Signup">Sign up</Link>
+          <p className="sign-up-text">Don't have an account? 
+            <Link to="/signup"> Sign up</Link>
           </p>
         </div>
       </div>
