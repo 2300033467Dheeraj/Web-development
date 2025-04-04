@@ -1,244 +1,243 @@
-/* Parent container */
 .parent {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    margin-right: 300px; /* Space for the sidebar */
-  }
-  
-  .posts-container {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .post-card {
-    display: flex; /* Changed */
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  .left-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-right: 10px;
-  }
-  
-  .vote-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px; /* Spacing between vote section and comment button */
-  }
-  
-  .vote-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    height: 20px;
-    font-size: large;
-    padding-bottom: 5px ;
-    margin-bottom: 10px;
-  }
-  
-  .vote-count {
-    margin: 5px 0;
-    font-size: 1.2em;
-  }
-  
-  .upvote {
-    color: green;
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-right: 300px; /* Space for the sidebar */
+}
 
-  }
-  
-  .downvote {
-    color: red;
-  }
-  .post-card {
-    background: white;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  
-  .post-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-  }
-  
-  .post-category {
-    background: #e0e0e0;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 0.9em;
-  }
-  
-  .post-content {
-    margin-bottom: 15px;
-    margin-top: 40px;
-    font-size: 0.95em;
-  }
-  
-  .post-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 15px;
-    border-top: 1px solid #eee;
-  }
-  
-  .post-meta {
-    display: flex;
-    gap: 15px;
-    color: #666;
-    font-size: 0.9em;
-  }
-  
-  .post-actions {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .post-actions button {
-    padding: 8px 12px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  
-  .like-btn {
-    background: #ff4b4b15;
-    color: #ff4b4b;
-    height: 40px;
-  }
-  .right-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-left: 10px;
-  }
-  
-  .comment-btn {
-    background: none;
-    border: none;
-    padding: 5px ;
-    cursor: pointer;
-    margin-bottom: 0px;
-    
-  }
-  .Commentimg{
-    width: 15px;
-    height: 15px;
-    margin-top: 40%;
-    margin-right: 5px;
-    background: transparent !important;
+.posts-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.post-card {
+  display: flex; /* Changed */
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.left-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 10px;
+}
 
-  }
+.vote-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px; /* Spacing between vote section and comment button */
+}
+
+.vote-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  height: 20px;
+  font-size: large;
+  padding-bottom: 5px ;
+  margin-bottom: 10px;
+}
+
+.vote-count {
+  margin: 5px 0;
+  font-size: 1.2em;
+}
+
+.upvote {
+  color: green;
+
+}
+
+.downvote {
+  color: red;
+}
+.post-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.post-category {
+  background: #e0e0e0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.post-content {
+  margin-bottom: 15px;
+  margin-top: 40px;
+  font-size: 0.95em;
+}
+
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.post-meta {
+  display: flex;
+  gap: 15px;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.post-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.post-actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.like-btn {
+  background: #ff4b4b15;
+  color: #ff4b4b;
+  height: 40px;
+}
+.right-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.comment-btn {
+  background: none;
+  border: none;
+  padding: 5px ;
+  cursor: pointer;
+  margin-bottom: 0px;
   
-  /* Create Thread Button */
-  .createthread {
-    background-color: #2563eb;
-    color: white;
-    font-weight: bold;
-    padding: 12px 20px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    position: right;
-  }
-  
-  .createthread:hover {
-    background-color: #1e40af;
-  }
-  
-  /* Button List */
-  .button-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-  }
-  
-  .button-list li {
-    margin-bottom: 10px;
-  }
-  
-  .button-list button {
-    background-color: #e5e7eb;
-    padding: 10px 16px;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .button-list button:hover {
-    background-color: #d1d5db;
-  }
-  .categories{
-    margin-top: 20px;
-    padding-bottom: 10px;
-  }
-  /* Right Sidebar */
-  .sidebar {
-    width: 280px;
-    padding: 20px;
-    background: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    position: fixed;
-    right: 40px;
-    top: 120px;
-  }
-  
-  /* Sidebar Sections */
-  .sidebar h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .sidebar ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .sidebar li {
-    margin-bottom: 10px;
-  }
-  
-  .sidebar a {
-    text-decoration: none;
-    color: #374151;
-    transition: font-weight 0.2s;
-  }
-  
-  .sidebar a:hover {
-    font-weight: bold;
-  }
-  
-  /* Trending Topics */
-  .trendingtopics {
-    margin-top: 20px;
-    display: contents;
-  }
-  
-  .trendingtopics li {
-    color: #4b5563;
-  }
-  
-  .trendingtopics strong {
-    color: black;
-  }
-  
-  .trendingtopics span {
-    font-size: 12px;
-    color: #9ca3af;
-  }
-  
+}
+.Commentimg{
+  width: 15px;
+  height: 15px;
+  margin-top: 40%;
+  margin-right: 5px;
+  background: transparent;
+
+}
+
+/* Create Thread Button */
+.createthread {
+  background-color: #2563eb;
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  position: right;
+}
+
+.createthread:hover {
+  background-color: #1e40af;
+}
+
+/* Button List */
+.button-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.button-list li {
+  margin-bottom: 10px;
+}
+
+.button-list button {
+  background-color: #e5e7eb;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button-list button:hover {
+  background-color: #d1d5db;
+}
+.categories{
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+/* Right Sidebar */
+.sidebar {
+  width: 280px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  position: fixed;
+  right: 40px;
+  top: 120px;
+}
+
+/* Sidebar Sections */
+.sidebar h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #374151;
+  transition: font-weight 0.2s;
+}
+
+.sidebar a:hover {
+  font-weight: bold;
+}
+
+/* Trending Topics */
+.trendingtopics {
+  margin-top: 20px;
+  display: contents;
+}
+
+.trendingtopics li {
+  color: #4b5563;
+}
+
+.trendingtopics strong {
+  color: black;
+}
+
+.trendingtopics span {
+  font-size: 12px;
+  color: #9ca3af;
+}
