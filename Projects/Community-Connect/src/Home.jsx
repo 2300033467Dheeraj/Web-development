@@ -49,7 +49,7 @@ export default function Home() {
                     <button className="vote-button downvote" onClick={() => handleVote(index, -1)}>▼</button>
                   </div>
                   <button className="comment-btn" onClick={() => toggleComments(index)}>
-                    <i className="fas fa-comment"></i> 
+                    <i className="fas fa-comment"></i>
                     <img src="/Comment.jpg" alt="Comment" className="Commentimg" />
                   </button>
                   {openComments[index] && <CommentSection postId={index} />}

@@ -16,6 +16,7 @@
   border: 1px solid #ddd;
   padding: 10px;
   margin-bottom: 10px;
+  
 }
 .left-section {
   display: flex;
@@ -126,19 +127,13 @@
 
 .comment-btn {
   background: none;
-  border: none;
-  padding: 5px ;
-  cursor: pointer;
-  margin-bottom: 0px;
-  
+  height: px;
+  width: 0px;
 }
 .Commentimg{
-  width: 15px;
-  height: 15px;
-  margin-top: 40%;
-  margin-right: 5px;
-  background: transparent;
-
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
 }
 
 /* Create Thread Button */

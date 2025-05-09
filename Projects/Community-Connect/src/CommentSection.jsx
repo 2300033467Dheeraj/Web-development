@@ -1,18 +1,16 @@
 import { useState, useEffect } from 'react';
-import './CommentSection.css'; // Create this CSS file
+import './CommentSection.css';
 
 function CommentSection({ postId }) {
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
 
   useEffect(() => {
-    // Load comments from local storage or an API
     const storedComments = JSON.parse(localStorage.getItem(`comments_${postId}`) || '[]');
     setComments(storedComments);
   }, [postId]);
 
   useEffect(() => {
-    // Save comments to local storage or an API
     localStorage.setItem(`comments_${postId}`, JSON.stringify(comments));
   }, [comments, postId]);
 
@@ -23,10 +21,10 @@ function CommentSection({ postId }) {
   const handleAddComment = () => {
     if (newComment.trim() !== '') {
       const commentObject = {
-        id: Date.now(), // Generate a unique ID
+        id: Date.now(),
         text: newComment,
         timestamp: new Date().toISOString(),
-        author: 'Anonymous', // Or get the user's name
+        author: 'Anonymous',
       };
       setComments([...comments, commentObject]);
       setNewComment('');
@@ -47,7 +45,7 @@ function CommentSection({ postId }) {
           onChange={handleInputChange}
           placeholder="Add a comment..."
         />
-        <button onClick={handleAddComment}>Post</button>
+        <button className='post-button' onClick={handleAddComment}>Post</button>
       </div>
       <ul className="comment-list">
         {comments.map((comment) => (
