@@ -4,6 +4,7 @@
   margin: 0 auto;
   padding: 20px;
   font-family: Arial, sans-serif;
+  background-color: #cae9f2;
 }
 
 /* Profile Header */
@@ -23,6 +24,7 @@
   border: 2px solid #ddd;
   cursor: pointer;
   transition: opacity 0.3s ease;
+
 }
 
 .profile-pic:hover {

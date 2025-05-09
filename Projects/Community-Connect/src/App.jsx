@@ -15,8 +15,9 @@ const App = () => {
 
 const styles = {
   container: {
-    backgroundImage: "url('/your-image-path.png')", // Replace with actual image path
+    backgroundImage: "url('/canva.png')", // Replace with actual image path
     display: 'flex',
+    flexDirection: 'column',
     backgroundSize: 'cover',  // Ensures the image covers the entire background
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
