@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import App from './App';
 import Home from './Home';
-import Profile from './profile';
+import Profile from './Profile';
 import Create from './Create';
 import Threads from './Profiledetails/Threads';
 import Replies from './Profiledetails/Replies';
