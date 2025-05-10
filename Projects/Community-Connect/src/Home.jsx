@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import axios from "axios";
 import './Home.css';
 import CommentSection from './CommentSection';
 
@@ -8,25 +9,39 @@ export default function Home() {
   const [posts, setPosts] = useState([]);
   const [votes, setVotes] = useState([]);
   const [openComments, setOpenComments] = useState({});
-  const [selectedCategory, setSelectedCategory] = useState("All Topics"); // Default category
+  const [selectedCategory, setSelectedCategory] = useState("All Topics");
 
+  // Fetch posts from backend
   useEffect(() => {
-    const storedPosts = JSON.parse(localStorage.getItem('posts')) || [];
-    setPosts(storedPosts);
-    setVotes(storedPosts.map(() => 0));
+    axios.get('http://localhost:8080/posts')
+      .then(res => {
+        setPosts(res.data);
+        setVotes(res.data.map(post => post.votes || 0));
+      })
+      .catch(err => console.error('Error fetching posts:', err));
   }, []);
 
+  // Handle upvote/downvote
   const handleVote = (index, change) => {
-    const newVotes = [...votes];
-    newVotes[index] += change;
-    setVotes(newVotes);
+    const postId = posts[index]._id;
+    axios.post(`http://localhost:8080/posts/${postId}/vote`, { change })
+      .then(res => {
+        const updatedPosts = [...posts];
+        updatedPosts[index] = res.data;
+        setPosts(updatedPosts);
+        const newVotes = [...votes];
+        newVotes[index] = res.data.votes;
+        setVotes(newVotes);
+      })
+      .catch(err => console.error('Error voting:', err));
   };
 
+  // Toggle comments
   const toggleComments = (index) => {
-    setOpenComments({
-      ...openComments,
-      [index]: !openComments[index],
-    });
+    setOpenComments(prev => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
   };
 
   // Filtered posts based on selected category
@@ -40,7 +55,7 @@ export default function Home() {
         <div className="posts-container">
           {filteredPosts.length > 0 ? (
             filteredPosts.map((post, index) => (
-              <div key={index} className="post-card">
+              <div key={post._id} className="post-card">
                 {/* Left Section (Votes and Comment) */}
                 <div className="left-section">
                   <div className="vote-section">
@@ -49,10 +64,9 @@ export default function Home() {
                     <button className="vote-button downvote" onClick={() => handleVote(index, -1)}>▼</button>
                   </div>
                   <button className="comment-btn" onClick={() => toggleComments(index)}>
-                    <i className="fas fa-comment"></i>
                     <img src="/Comment.jpg" alt="Comment" className="Commentimg" />
                   </button>
-                  {openComments[index] && <CommentSection postId={index} />}
+                  {openComments[index] && <CommentSection postId={post._id} />}
                 </div>
 
                 {/* Right Section (Post Content) */}
@@ -89,7 +103,7 @@ export default function Home() {
         <div className="categories">
           <h3>Categories</h3>
           <ul className="button-list">
-            {["All Topics", "Development", "Design", "Devops", "Career","Technology", "Programming", "Web"].map((text, index) => (
+            {["All Topics", "Development", "Design", "Devops", "Career", "Technology", "Programming", "Web"].map((text, index) => (
               <li key={index}>
                 <button
                   className={selectedCategory === text ? "active-category" : ""}
@@ -104,4 +118,4 @@ export default function Home() {
       </div>
     </div>
   );
-} 
+}

@@ -1,180 +1,174 @@
-/* General Profile Container */
-.profile-container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-  background-color: #cae9f2;
-}
-
-/* Profile Header */
-.profile-header {
+/* Wrapper */
+.profile-wrapper {
   display: flex;
-  align-items: center;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #dbdbdb;
+  max-width: 1200px;
+  margin: 40px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  gap: 30px;
 }
 
-/* Profile Picture */
-.profile-pic {
+/* Left Sidebar */
+.profile-sidebar {
+  margin-top: 20px; /* Adjust value as needed */
+
+  width: 280px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  margin-top: 20px; /* ✅ This is the only line added */
+}
+
+
+.sidebar-pic {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  margin-right: 20px;
-  border: 2px solid #ddd;
+  border: 3px solid #eee;
+  margin-bottom: 15px;
   cursor: pointer;
-  transition: opacity 0.3s ease;
-
 }
 
-.profile-pic:hover {
-  opacity: 0.8;
+.sidebar-username {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 5px 0;
 }
 
-/* Profile Info */
-.profile-info {
-  flex-grow: 1;
+.sidebar-title {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 15px;
 }
 
-.username {
-  font-size: 24px;
-  font-weight: bold;
+.sidebar-bio {
+  font-size: 13px;
+  color: #555;
+  white-space: pre-line;
+  margin-bottom: 20px;
 }
 
-.stats {
+.sidebar-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.btn-follow, .btn-message {
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-follow {
+  background-color: #0095f6;
+  color: white;
+}
+
+.btn-follow:hover {
+  background-color: #0073e6;
+}
+
+.btn-message {
+  background-color: #e5e5e5;
+  color: #333;
+}
+
+.btn-message:hover {
+  background-color: #d5d5d5;
+}
+
+.sidebar-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.sidebar-meta {
+  font-size: 13px;
+  color: #555;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.sidebar-meta a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.social-icons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons i {
+  font-size: 18px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Main Content */
+.profile-main {
+  flex: 1;
+}
+
+.tabs {
   display: flex;
   gap: 20px;
-  margin: 10px 0;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
 }
 
-.stats span {
+.tabs button {
+  background: none;
+  border: none;
   font-size: 16px;
+  padding: 10px 0;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.3s ease;
 }
 
-.bio {
+.tabs button:hover,
+.tabs button.active {
+  border-bottom: 3px solid #0095f6;
+  color: #0095f6;
+}
+
+/* Threads/Posts */
+.thread-card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.thread-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.thread-card p {
   font-size: 14px;
   color: #555;
+  margin-bottom: 15px;
 }
 
-/* Profile Buttons */
-.profile-buttons {
+.card-footer {
+  font-size: 13px;
+  color: #777;
   display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-/* Follow Button */
-.follow-btn {
-  background-color: #0095f6;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s ease-in-out;
-}
-
-.follow-btn:hover {
-  background-color: #0073e6;
-}
-
-.following {
-  background-color: #d3d3d3;
-  color: black;
-}
-
-/* Edit Button */
-.edit-btn {
-  background-color: #ff9900;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s ease-in-out;
-}
-
-.edit-btn:hover {
-  background-color: #e68a00;
-}
-
-/* Profile Links */
-.profile-links {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.profile-link {
-  display:block;
-  padding: 10px;
-  background-color: #0095f6;
-  color: white;
-  text-align: center;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 16px;
-  transition: background 0.3s ease-in-out;
-}
-
-.profile-link:hover {
-  background-color: #0073e6;
-}
-
-/* Edit Input Fields */
-.edit-input, .edit-bio {
-  width: 100%;
-  padding: 5px;
-  font-size: 16px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-top: 5px;
-}
-
-.edit-bio {
-  height: 50px;
-  resize: none;
-}
-
-/* Profile Tabs */
-.profile-tabs {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  gap: 10px;
-}
-
-.tab-button {
-  background-color: #ddd;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s ease-in-out;
-}
-
-.tab-button.active {
-  background-color: #0095f6;
-  color: white;
-}
-
-.tab-button:hover {
-  background-color: #0073e6;
-  color: white;
-}
-
-/* Content Sections */
-.tab-content {
-  margin-top: 20px;
-  padding: 15px;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-}
-
-.threads, .replies {
-  padding: 10px;
+  gap: 20px;
 }
