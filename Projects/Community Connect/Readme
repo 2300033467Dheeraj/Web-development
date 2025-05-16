@@ -1,0 +1,44 @@
+# Community Connect: Engaging Minds, Sharing Knowledge
+
+[![KLU Project](https://img.shields.io/badge/University-KLU-blue.svg)](https://www.klu.ac.in/)
+[![Beginner Project](https://img.shields.io/badge/Development-Beginner-orange.svg)](https://img.shields.io/badge/Development-Beginner-orange.svg)
+[![AI Assisted](https://img.shields.io/badge/AI-Assisted-lightgrey.svg)](https://img.shields.io/badge/AI-Assisted-lightgrey.svg)
+
+Community Connect is a forum platform developed as a group project for K L University, designed to foster engagement and knowledge sharing within a vibrant online space.
+
+## Key Features
+
+* **Threaded Discussions:** Engage in structured conversations across diverse topics.
+* **Q&A Functionality:** Ask questions and receive answers from the community.
+* **Categorized Topics:** Easily navigate discussions organized by subject.
+* **Tagging System:** Discover content using relevant keywords.
+* **Search Engine:** Quickly find specific information within the forums.
+* **Upvote/Downvote System:** Highlight valuable contributions and filter less relevant content.
+* **User Roles:** Features tiered access for users, moderators, and administrators.
+* **Moderation Tools:** Maintain a positive and respectful community environment.
+* **Real-time Notifications:** Stay updated on followed threads and mentions.
+* **Email Digests:** Receive summaries of recent forum activity.
+
+## Tech Stack
+
+* **Backend:** [Spring Boot](https://spring.io/projects/spring-boot) (developed using [Spring Tool Suite](https://spring.io/tools))
+* **Frontend:** [React](https://react.dev/), JavaScript, CSS
+
+## Project Goals
+
+* **Enhance Collaboration:** Facilitate peer learning and knowledge exchange.
+* **Improve Knowledge Retention:** Create a searchable archive of community insights.
+* **Reduce Support Needs:** Empower users to find solutions independently.
+
+## Development Notes
+
+This project was developed by students new to these technologies. As beginners, we utilized AI tools to aid in learning concepts and improving our development workflow.
+
+## Getting Started (Example - Backend)
+
+*(Add specific instructions on how to run your backend and frontend if you wish to share your project)*
+
+```bash
+# Example: Running the Spring Boot backend (assuming Maven)
+cd backend-directory
+mvn spring-boot:run
