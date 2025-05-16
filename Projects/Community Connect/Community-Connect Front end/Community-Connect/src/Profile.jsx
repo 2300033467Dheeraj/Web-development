@@ -199,7 +199,8 @@ export default function Profile() {
         <div className="thread-card">
           <h3>Understanding TypeScript generics</h3>
           <p>
-            TypeScript generics can be confusing at first, but they're incredibly powerful once you understand them…
+            TypeScript generics can be confusing at first, but they're
+            incredibly powerful once you understand them…
           </p>
           <div className="card-footer">
             <span>187 👍</span>

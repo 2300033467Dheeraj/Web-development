@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./login.css";
+import "./login.css"; // Ensure you have this CSS file
 
 const Login = () => {
   const navigate = useNavigate();
@@ -8,20 +8,29 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent page refresh
+    event.preventDefault();
 
-    // Basic validation
     if (!email || !password) {
       alert("Please enter both email and password.");
       return;
     }
 
-    console.log("Email:", email);
-    console.log("Password:", password);
-
-    // TODO: Replace with actual authentication logic (API call)
-
-    navigate("/"); // Redirect user after login
+    fetch("http://localhost:8080/api/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password }),
+    })
+      .then((res) => res.text())
+      .then((data) => {
+        alert(data);
+        if (data === "Login successful!") {
+          navigate("/"); // Or your desired dashboard route
+        }
+      })
+      .catch((err) => {
+        console.error("Login failed", err);
+        alert("Login failed. Please try again.");
+      });
   };
 
   return (
@@ -81,4 +90,3 @@ const Login = () => {
 };
 
 export default Login;
-  
