@@ -28,7 +28,3 @@ console.log(~a); // Bitwise NOT
 console.log(a << 1); // Bitwise left shift
 console.log(a >> 1); // Bitwise right shift
 console.log(a >>> 1); // Bitwise zero-fill right shift
-console.log(a && b); // Logical AND
-console.log(a || b); // Logical OR
-console.log(!a); // Logical NOT
-console.log(a & b); // Bitwise AND
