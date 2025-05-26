@@ -1,0 +1,41 @@
+#Community Connect
+
+KLU Project
+AI assisted proeject
+Bi
+A forum platform developed for K L University to foster engagement and knowledge sharing.
+
+## Key Features
+
+* Threaded Discussions
+* Q&A Functionality
+* Categorized Topics
+* Tagging System
+* Search Engine
+* Upvote/Downvote System
+* User Roles (User, Moderator, Admin)
+* Moderation Tools
+* Real-time Notifications
+* Email Digests
+
+## Tech Stack
+
+* **Backend:** Spring Boot (Spring Tool Suite)
+* **Frontend:** React, JavaScript, CSS
+
+## Project Goals
+
+* Enhance Collaboration
+* Improve Knowledge Retention
+* Reduce Support Needs
+
+## Development Notes
+
+Developed by beginners with AI assistance for learning and workflow.
+
+## Getting Started (Example)
+
+```bash
+# Backend (Maven)
+cd backend-directory
+mvn spring-boot:run
