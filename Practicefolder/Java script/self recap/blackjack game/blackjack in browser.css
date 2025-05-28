@@ -7,8 +7,18 @@ h1{
     color: rgb(174, 201, 53);
     font-size: 24px;
     text-align: center;
-    
+
 }
 p{
     text-align: center;
+}
+button{
+    background-color: rgb(174, 201, 53);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    align-items: center;
 }
