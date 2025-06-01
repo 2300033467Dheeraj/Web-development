@@ -1,3 +1,11 @@
+
+let player={
+     name: "Dheeraj",
+     bet:"40",
+
+}
+
+
 let cards = [];
 let sum = 0;
 let hasBlackjack = false
@@ -11,10 +19,6 @@ console.log(sumEL)
 cardEl = document.getElementById("cards-el")
 console.log(cardEl)
 
-let player={
-     name: "Dheeraj",
-     bet:"40"
-}
 playerEl = document.getElementById("player-el")
 playerEl.textContent = player.name + ": $" + player.bet
 
