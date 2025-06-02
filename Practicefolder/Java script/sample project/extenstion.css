@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+    padding:10px;
+}
+input{
+    width : 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+button{
+    padding: 10px;
+    font:bold 16px Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+}
