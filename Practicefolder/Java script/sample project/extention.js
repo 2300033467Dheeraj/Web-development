@@ -15,7 +15,9 @@ function renderLeads() {
         ulEL.innerHTML += 
         `
             <li>
-                <a target = '_blank' href='${myLeads[i]}'></a>
+                <a target = '_blank' href='${myLeads[i]}'>
+                ${myLeads[i]}
+                </a>
             </li>
         ` ;
     }
