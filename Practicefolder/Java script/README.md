@@ -1,14 +1,21 @@
-I sucessfully completed learing JAVA SCRIPT with some projects.
+I completed learning JavaScript with some projects.
+The projects include:
 
-The projects are:
-1. Calculator
-        - This is a simple calculator which can perform addition, subtraction, multiplication and division.
-2. Black Jack game
-        - This is a simple game which can be played by two players, with my knowledge of java script i created this game.
-3. A sample Extention which can be used as extension in any browser by adding file in extension.
-        - This is a extention which can be used to add any type of text and any web site URL with a single button in this extention this uses your local storage to store the data, so that data will not be lost even if you close the browser.
+1. **Calculator**  
+   This is a simple calculator that performs addition, subtraction, multiplication, and division.
+
+2. **Blackjack Game**  
+   - This is a two-player game that I created using my knowledge of JavaScript.
+
+3. **Sample Browser Extension**  
+   - This is an extension that can be added to any browser by uploading the appropriate file. It allows users to save any text and website URL by interacting with the Chrome API with the click of a button. The extension uses local storage to ensure that the data is preserved even after closing the browser.
+
+I have uploaded the projects and practice codes [here].  
+I learned JavaScript from YouTube.  
+- https://youtu.be/jS4aFq5-91M?si=RT4qyip3WUaRRubAe extension.
+        - This is an extension that can be used to add any text and any website URL with a single button. This extension uses your local storage to store the data, so that the data will not be lost even if you close the browser.
 
 I uploaded projects and practice codes here.
-I learned java script from youtube.
+I learned JavaScript from YouTube.
     - https://youtu.be/jS4aFq5-91M?si=RT4qyip3WUaRRubA
 
