@@ -14,9 +14,13 @@ button{
     box-sizing: border-box;
     background-color: #4CAF50;
     color: white;
-    border: none;
+    border: 1px solid #4CAF50;
     cursor: pointer;
     margin-top: 5px;
+}
+#delete-btn{
+    background: white;
+    color:#4CAF50;
 }
 ul{
     margin-top: 10px;
