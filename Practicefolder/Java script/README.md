@@ -12,10 +12,4 @@ The projects include:
 
 I have uploaded the projects and practice codes [here].  
 I learned JavaScript from YouTube.  
-- https://youtu.be/jS4aFq5-91M?si=RT4qyip3WUaRRubAe extension.
-        - This is an extension that can be used to add any text and any website URL with a single button. This extension uses your local storage to store the data, so that the data will not be lost even if you close the browser.
-
-I uploaded projects and practice codes.
-I learned JavaScript from YouTube.
-    - https://youtu.be/jS4aFq5-91M?si=RT4qyip3WUaRRubA
-
+- https://youtu.be/jS4aFq5-91M?si=RT4qyip3WUaRRubAe
