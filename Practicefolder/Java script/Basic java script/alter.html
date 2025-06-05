@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Cursor Interaction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh; /* Ensures body takes full viewport height */
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        #cursorCoords {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        #hoverArea {
+            width: 250px;
+            height: 100px;
+            background-color: #e0f7fa; /* Light blue */
+            border: 2px solid #00bcd4; /* Cyan */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: background-color 0.3s ease; /* Smooth transition for hover */
+        }
+
+        /* CSS for hover effect on #hoverArea */
+        #hoverArea:hover {
+            background-color: #b2ebf2; /* Darker blue on hover */
+            cursor: pointer; /* Change cursor on hover */
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        .instruction {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="cursorCoords">
+        <h2>Mouse Position</h2>
+        <p>X: <span id="mouseX">0</span></p>
+        <p>Y: <span id="mouseY">0</span></p>
+    </div>
+
+    <div id="hoverArea">
+        <p>Hover over me (Cursor Changes)</p>
+    </div>
+
+    <p class="instruction">Click anywhere on the page and check your browser's console for a message!</p>
+
+    <script>
+        // --- 1. Get Cursor Position ---
+        document.addEventListener('mousemove', function(event) {
+            // Update X and Y coordinates in the display
+            document.getElementById('mouseX').textContent = event.clientX;
+            document.getElementById('mouseY').textContent = event.clientY;
+        });
+
+        // --- 2. Change Cursor Style (on hover, primarily done via CSS for simplicity) ---
+        // The #hoverArea:hover CSS rule handles this directly.
+        // If you needed JavaScript for more complex or dynamic cursor changes:
+        // const hoverElement = document.getElementById('hoverArea');
+        // hoverElement.addEventListener('mouseenter', () => {
+        //     hoverElement.style.cursor = 'grab';
+        // });
+        // hoverElement.addEventListener('mouseleave', () => {
+        //     hoverElement.style.cursor = 'default';
+        // });
+
+
+        // --- 3. Detect Clicks ---
+        document.addEventListener('click', function(event) {
+            console.log(`Page clicked at X: ${event.clientX}, Y: ${event.clientY}`);
+            // You can add more complex logic here based on where the click occurred
+            // For example, if (event.target.id === 'someButton') { ... }
+        });
+
+        // --- Optional: Detect Right-Clicks ---
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault(); // Prevents the default right-click context menu
+            console.log("Right-click detected!");
+        });
+
+    </script>
+</body>
+</html>
